@@ -1,0 +1,132 @@
+.introduction-container {
+  background-color: #141d2f;
+  font-family: "Poppins";
+  display: flex;
+  padding-right: 90px;
+  max-height: 600px;
+}
+
+.intro-background-form {
+  margin-left: -80px;
+}
+
+.introduction-img {
+  height: 705px;
+  width: 646px;
+  object-fit: cover;
+  position: absolute;
+  left: 28px;
+  top: 18px;
+}
+
+.intro-box {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  margin-top: 125px;
+  position: relative;
+  z-index: 2;
+}
+
+.text-I-am {
+  font-weight: 400;
+  font-size: 40px;
+  transform: rotate(-90deg);
+  color: white;
+  margin-left: -173px;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 3px;
+}
+
+.name-dev {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-name {
+  color: white;
+  font-weight: 700;
+  font-size: 41px;
+}
+
+.intro-dev {
+  font-weight: 400;
+  font-size: 35px;
+  color: #4b47ff;
+}
+
+.btn-talk {
+  width: 165px;
+  height: 45px;
+  color: white;
+  background-color: #00bee8;
+  position: absolute;
+  top: 130px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #4b47ff;
+  }
+}
+
+.background-form {
+  position: absolute;
+  top: 270px;
+  left: -5px;
+  width: calc(100% + 5px);
+}
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  width: 600px;
+  font-family: 'Poppins';
+  margin-top: 16px;
+}
+
+.blue-line {
+  border: 2px solid #4B47FF;
+  width: 100px;
+  height: 0px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.contact-mail {
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.section-between {
+  display: flex;
+  font-family: 'Poppins';
+  position: relative;
+  padding-right: 90px;
+}
+
+.scroll-down-div {
+  z-index: 2;
+  transform: rotate(90deg);
+  color: white;
+  font-weight: 400;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 37px;
+  bottom: 110px;
+
+    img {
+      transform: rotate(-90deg);
+      margin-left: 6px;
+    }
+}
+
