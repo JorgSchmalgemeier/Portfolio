@@ -1,8 +1,13 @@
+:host {
+  margin-bottom: 120px;
+  display: block;
+}
+
 .introduction-container {
   background-color: #141d2f;
   font-family: "Poppins";
   display: flex;
-  padding-right: 90px;
+  padding-right: 120px;
   max-height: 600px;
 }
 
@@ -33,7 +38,7 @@
   font-size: 40px;
   transform: rotate(-90deg);
   color: white;
-  margin-left: -173px;
+  margin-left: -200px;
   width: fit-content;
   height: fit-content;
   margin-top: 3px;
@@ -75,9 +80,10 @@
 
 .background-form {
   position: absolute;
-  top: 270px;
+  top: 260px;
   left: -5px;
   width: calc(100% + 5px);
+  height: 970px;
 }
 
 .contact-icons {
@@ -88,7 +94,6 @@
   z-index: 2;
   width: 600px;
   font-family: 'Poppins';
-  margin-top: 16px;
 }
 
 .blue-line {
@@ -109,7 +114,8 @@
   display: flex;
   font-family: 'Poppins';
   position: relative;
-  padding-right: 90px;
+  padding-right: 120px;
+  margin-top: 30px;
 }
 
 .scroll-down-div {
@@ -121,8 +127,8 @@
   display: flex;
   align-items: center;
   position: absolute;
-  right: 37px;
-  bottom: 110px;
+  right: 70px;
+  bottom: 120px;
 
     img {
       transform: rotate(-90deg);

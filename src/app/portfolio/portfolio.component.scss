@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  background-color: #141d2f;
+  padding-left: 120px;
+  position: relative;
+  font-family: 'Poppins';
+}
+
+.headline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-right: 120px;
+}
+
+.headline {
+  margin-top: 0;
+  margin-bottom: 35px;
+  color: white;
+}
+
+.info-text {
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+}
+
+.short-blue-line {
+  border: 2px solid #4b47ff;
+  width: 109px;
+  height: 0;
+  position: absolute;
+  top: 43px;
+  left: 361px;
+}
+
+.long-blue-line {
+  border: 2px solid #4B47FF;
+    width: 465px;
+    height: 0;
+    position: absolute;
+    top: 43px;
+    right: 0;
+}
