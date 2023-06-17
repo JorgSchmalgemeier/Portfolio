@@ -7,6 +7,9 @@
   align-items: center;
   padding-left: 120px;
   padding-right: 90px;
+  position: fixed;
+  width: calc(100% - 210px);
+  z-index: 10;
 }
 
 .logo-name {

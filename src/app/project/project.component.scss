@@ -1,0 +1,92 @@
+:host {
+  display: flex;
+  background-color: #141d2f;
+  font-family: "Poppins";
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.project-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 227px;
+  width: 100%;
+  z-index: 2;
+  img {
+    max-height: 339px;
+    max-width: 620px;
+    height: 280px;
+    width: 477px;
+    object-fit: cover;
+  }
+}
+
+.img-container {
+  width: 40%;
+  margin-right: 140px;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.tec {
+  font-weight: 400;
+  font-size: 23px;
+  color: #00bee8;
+  margin-bottom: 15px;
+}
+
+.description {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn-live-test {
+  color: white;
+  font-weight: 400;
+  font-size: 23px;
+  background-color: #4b47ff;
+  width: 152px;
+  height: 58px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 65px;
+    &:hover {
+      cursor: pointer;
+      background-color: #00bee8;
+    }
+}
+
+.btn-github {
+  color: white;
+  font-weight: 400;
+  font-size: 23px;
+  background-color: unset;
+  width: 152px;
+  height: 58px;
+  border-radius: 10px;
+  border: 2px solid #00bee8;
+  &:hover {
+    cursor: pointer;
+    background-color: #00bee8;
+  }
+}
+
+.change-direction {
+  flex-direction: row-reverse;
+}
+
+.change-direction-img {
+  margin-right: 0 !important;
+  margin-left: 70px;
+}

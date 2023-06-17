@@ -1,0 +1,14 @@
+<div [class.change-direction]="changeDirection" class="project-container">
+  <div [class.change-direction-img]="changeDirection" class="img-container">
+    <img src="../../assets/img/{{ project.img }}" />
+  </div>
+  <div class="project-info">
+    <h2>{{ project.name }}</h2>
+    <span class="tec">{{ project.tec }}</span>
+    <span class="description">{{ project.description }}</span>
+    <div class="btn-container">
+      <button class="btn-live-test">Live test</button>
+      <button class="btn-github">Github</button>
+    </div>
+  </div>
+</div>

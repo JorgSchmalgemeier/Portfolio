@@ -8,6 +8,9 @@ import { IntroductionComponent } from './introduction/introduction.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ProjectComponent } from './project/project.component';
+import { ContactComponent } from './contact/contact.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     IntroductionComponent,
     AboutMeComponent,
     MySkillsComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ProjectComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
