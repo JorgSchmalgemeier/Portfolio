@@ -9,10 +9,22 @@
     <span class="span-contact">Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</span>
     <span class="span-need">Need a Frontend developer?&nbsp;<p class="p-bold">Contact me!</p></span>
   </div>
-  <form>
-    <input placeholder="Your name" type="text">
-    <input placeholder="Your email" type="text">
-    <textarea placeholder="Your message"></textarea>
-    <button>Send message</button>
+  <form (submit)="sendMail()" ngNativeValidate #myForm>
+    <div class="input-div" [class.red-border]= "checkNameField()" #nameFieldDiv>
+      <input required minlength="3" placeholder="Your name" type="text" name="name" #nameField>
+      <img class="red-alert-img" src="/assets/img/objects/input-red.png" [class.d-flex]= "nameInputValue" #nameFieldAlert>
+    </div>
+    <div class="input-div" [class.red-border]= "emailInputValue" #emailFieldDiv>
+      <input placeholder="Your email" (keyup)="checkEmailField()" required type="text" name="email" #emailField>
+      <img class="red-alert-img" src="/assets/img/objects/input-red.png" [class.d-flex]= "emailInputValue" #emailFieldAlert>
+    </div>
+    <div class="textarea-div">
+      <textarea required minlength="3" placeholder="Your message" name="message" #messageField></textarea>
+      <img class="red-alert-img" src="/assets/img/objects/input-red.png" #messageFieldAlert>
+    </div>
+    <button #sendButton>Send message</button>
   </form>
+  <div class="scroll-top-div">
+    <img src="assets/img/objects/scroll-top.png">
+  </div>
 </div>
