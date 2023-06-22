@@ -16,7 +16,7 @@ export class ContactComponent {
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
   //@Input() email: boolean | string;
-  nameInputValue = false;
+  nameValid = true;
   emailInputValue = false;
   messageInputValue = false;
 
@@ -88,10 +88,11 @@ export class ContactComponent {
   }*/
 
   checkNameField() {
-    if (this.nameForm?.valid) {
-      this.nameInputValue = true;
+    if (this.nameForm?.invalid) {
+      this.nameValid = false;
+      console.log('invalid');
     } else {
-      this.nameInputValue = false;
+      this.nameValid = true;
     }
   }
 

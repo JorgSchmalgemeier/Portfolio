@@ -11,9 +11,9 @@
   </div>
 
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" #myForm>
-    <div class="input-div" [class.red-border]="nameInputValue" #nameFieldDiv>
-      <input required minlength="3" placeholder="Your name" formControlName="nameForm" (keyup)="checkNameField()" ngModel email type="text" name="name" #nameField>
-      <img class="red-alert-img" src="/assets/img/objects/input-red.png" [class.d-flex]="nameInputValue" #nameFieldAlert>
+    <div class="input-div" [class.red-border]="!nameValid" #nameFieldDiv>
+      <input required minlength="3" (keyup)="checkNameField()" placeholder="Your name" formControlName="nameForm" (keyup)="checkNameField()" ngModel email type="text" name="name" #nameField>
+      <img class="red-alert-img" src="/assets/img/objects/input-red.png" [class.d-flex]="!nameValid" #nameFieldAlert>
     </div>
     <div *ngIf="nameForm?.invalid && (nameForm?.dirty || nameForm?.touched)">
       <div class="alert-letters" *ngIf="nameForm?.errors?.['required']">Your name is required</div>
@@ -36,7 +36,7 @@
       <img class="red-alert-img" src="/assets/img/objects/input-red.png" [class.d-flex]= "messageInputValue" #messageFieldAlert>
     </div>
 
-    <p>{{ nameForm?.status }}</p>
+    <p>{{ contactForm.status }}</p>
     <button type="submit" [disabled]="!contactForm.valid" #sendButton>Send message</button>
   </form>
   <div class="scroll-top-div">
