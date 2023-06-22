@@ -1,4 +1,6 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, Input } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -6,16 +8,37 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
+
+
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
+  //@Input() email: boolean | string;
   nameInputValue = false;
   emailInputValue = false;
   messageInputValue = false;
 
-  async sendMail() {
+  contactForm = new FormGroup({
+    nameForm: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    emailForm: new FormControl('', [Validators.required, Validators.email]),
+    messageForm: new FormControl('', [Validators.required, Validators.minLength(5)])
+  });
+
+  get nameForm() {
+    return this.contactForm.get('nameForm');
+  }
+
+  get emailForm() {
+    return this.contactForm.get('emailForm');
+  }
+
+  get messageForm() {
+    return this.contactForm.get('messageForm');
+  }
+
+  async onSubmit() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
@@ -65,10 +88,10 @@ export class ContactComponent {
   }*/
 
   checkNameField() {
-    if (this.nameField?.nativeElement == 1 || this.nameField?.nativeElement == 2) {
-      return true;
+    if (this.nameForm?.valid) {
+      this.nameInputValue = true;
     } else {
-      return false;
+      this.nameInputValue = false;
     }
   }
 
@@ -77,6 +100,14 @@ export class ContactComponent {
       this.emailInputValue = true;
     } else {
       this.emailInputValue = false;
+    }
+  }
+
+  checkMessageField() {
+    if (this.messageField.nativeElement.value.length == 1 || this.messageField.nativeElement.value.length == 2) {
+      this.messageInputValue = true;
+    } else {
+      this.messageInputValue = false;
     }
   }
 }
