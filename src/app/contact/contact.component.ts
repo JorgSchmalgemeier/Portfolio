@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, Input } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
@@ -8,49 +8,54 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-
-
-  @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
-  //@Input() email: boolean | string;
   nameValid = true;
-  emailInputValue = false;
-  messageInputValue = false;
+  emailValid = true;
+  messageValid = true;
+  isLoading = false;
+  sendMessage = false;
 
   contactForm = new FormGroup({
-    nameForm: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    nameForm: new FormControl('', [Validators.required,Validators.minLength(3),]),
     emailForm: new FormControl('', [Validators.required, Validators.email]),
-    messageForm: new FormControl('', [Validators.required, Validators.minLength(5)])
+    messageForm: new FormControl('', [Validators.required,Validators.minLength(5),]),
   });
+
 
   get nameForm() {
     return this.contactForm.get('nameForm');
   }
 
+
   get emailForm() {
     return this.contactForm.get('emailForm');
   }
+
 
   get messageForm() {
     return this.contactForm.get('messageForm');
   }
 
-  async onSubmit() {
+
+  sendMail() {
+    this.isLoading = true;
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
     let sendButton = this.nameField.nativeElement;
 
-    nameField.disabled = true;
-    emailField.disabled = true;
-    messageField.disabled = true;
-    sendButton.disabled = true;
+    this.disableFields(nameField, emailField, messageField, sendButton);
+    this.fetchData(nameField, emailField, messageField);
+    this.enableFields(nameField, emailField, messageField, sendButton);
+    this.contactForm.reset();
+    this.isLoading = false;
+    this.showTextSuccess();
+  }
 
-    //Ladeanimation einfügen
-
+  async fetchData(nameField: any, emailField: any, messageField: any) {
     let fd = new FormData();
     fd.append('name', nameField.value);
     fd.append('email', emailField.value);
@@ -63,8 +68,35 @@ export class ContactComponent {
         body: fd,
       }
     );
+  }
 
-    //Text anzeigen, Nachricht gesendet
+  showTextSuccess() {
+    this.sendMessage = true;
+    console.log(this.sendMessage);
+    setTimeout(() => {
+      this.sendMessage = false;
+      console.log(this.sendMessage);
+    }, 2000);
+  }
+
+  disableFields(
+    nameField: any,
+    emailField: any,
+    messageField: any,
+    sendButton: any
+  ) {
+    nameField.disabled = true;
+    emailField.disabled = true;
+    messageField.disabled = true;
+    sendButton.disabled = true;
+  }
+
+  enableFields(
+    nameField: any,
+    emailField: any,
+    messageField: any,
+    sendButton: any
+  ) {
     nameField.disabled = false;
     emailField.disabled = false;
     messageField.disabled = false;
@@ -74,43 +106,36 @@ export class ContactComponent {
     messageField.value = '';
   }
 
-  /*checkInputValues(field:any) {
-    let nameField = this.nameField.nativeElement;
-    let nameFieldDiv = this.nameFieldDiv.nativeElement;
-    let nameFieldAlert = this.nameFieldAlert.nativeElement;
-    if (this.nameField.nativeElement.value.length == 1 || field.value.length == 2 ) {
-      nameFieldDiv.classList.add('red-border');
-      nameFieldAlert.classList.add('d-flex');
-    } else {
-      this.nameFieldDiv.nativeElement.classList.remove('red-border');
-      nameFieldAlert.classList.remove('d-flex');
-    }
-  }*/
-
   checkNameField() {
-    if (this.nameForm?.invalid) {
+    if (
+      this.nameForm?.invalid &&
+      (this.nameForm?.dirty || this.nameForm?.touched)
+    ) {
       this.nameValid = false;
-      console.log('invalid');
     } else {
       this.nameValid = true;
     }
   }
 
   checkEmailField() {
-    if (this.emailField.nativeElement.value.length == 1 || this.emailField.nativeElement.value.length == 2) {
-      this.emailInputValue = true;
+    if (
+      this.emailForm?.invalid &&
+      (this.emailForm?.dirty || this.emailForm?.touched)
+    ) {
+      this.emailValid = false;
     } else {
-      this.emailInputValue = false;
+      this.emailValid = true;
     }
   }
 
   checkMessageField() {
-    if (this.messageField.nativeElement.value.length == 1 || this.messageField.nativeElement.value.length == 2) {
-      this.messageInputValue = true;
+    if (
+      this.messageForm?.invalid &&
+      (this.messageForm?.dirty || this.messageForm?.touched)
+    ) {
+      this.messageValid = false;
     } else {
-      this.messageInputValue = false;
+      this.messageValid = true;
     }
   }
 }
-
-

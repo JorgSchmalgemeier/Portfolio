@@ -2,6 +2,7 @@
   display: block;
   background-color: #141d2f;
   font-family: "Poppins";
+  position: relative;
 }
 
 .headline-box {
@@ -24,9 +25,11 @@
 
 .contact-container {
   display: flex;
+  justify-content: space-between;
   color: white;
   padding-left: 120px;
   padding-right: 120px;
+  padding-bottom: 227px;
   margin-top: 85px;
   z-index: 2;
   position: relative;
@@ -81,132 +84,166 @@ form {
     width: 90%;
     height: 40px;
   }
-
-  .input-div {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100% - 30px);
-    height: 50px;
-    background-color: #141d2f;
-    border: 1px solid #4b47ff;
-    border-radius: 10px;
-    margin-bottom: 35px;
-    padding-left: 15px;
-    padding-right: 15px;
-    outline: #00bee8;
-    &:hover {
-      border: 1px solid #00bee8;
-    }
-  }
-
-  textarea {
-    background-color: #141d2f;
-    width: calc(100% - 15px);
-    max-width: calc(100% - 15px);
-    height: 202px;
-    max-height: 202px;
-    color: white;
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 16px;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-right: 48px;
-    outline: none;
-    border: 1px solid #4b47ff;
-    border-radius: 10px;
-    outline: #00bee8;
-    &:hover {
-      border: 1px solid #00bee8;
-    }
-  }
-
-  textarea::-webkit-scrollbar {
-    width: 3px;
-  }
-
-  textarea::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-
-  textarea::-webkit-scrollbar-thumb {
-    background: #00bee8;
-    border-radius: 10px;
-  }
-
-  .textarea-div {
-    width: 100%;
-    height: 217px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #141d2f;
-    margin-bottom: 35px;
-  }
-
-  .red-alert-img {
-    display: none;
-    position: absolute;
-    right: 15px;
-    top: 12px;
-  }
-
-  button {
-    width: 253px;
-    height: 58px;
-    background-color: #00bee8;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    border: none;
-    color: white;
-    font-weight: 400;
-    font-size: 23px;
-    &:hover {
-      background-color: #4b47ff;
-      cursor: pointer;
-    }
-  }
-
-  input::placeholder {
-    color: white;
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 16px;
-  }
-
-  textarea::placeholder {
-    color: white;
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 16px;
-  }
-
-  .red-border {
-    border: 1px solid red;
-    &:hover {
-      border: 1px solid red;
-    }
-  }
-
-  .blue-border {
-    border: 1px solid #4b47ff;
-    &:hover {
-      border: 1px solid #00bee8;
-    }
-  }
-
-  .d-flex {
-    display: flex;
+}
+.input-div {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 30px);
+  height: 50px;
+  background-color: #141d2f;
+  border: 1px solid #4b47ff;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: #00bee8;
+  &:hover {
+    border: 1px solid #00bee8;
   }
 }
 
-.scroll-top-div {
+textarea {
+  background-color: #141d2f;
+  width: calc(100% - 15px);
+  max-width: calc(100% - 15px);
+  height: 202px;
+  max-height: 202px;
+  color: white;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 48px;
+  outline: none;
+  border: 1px solid #4b47ff;
+  border-radius: 10px;
+  outline: #00bee8;
+  resize: none;
+  &:hover {
+    border: 1px solid #00bee8;
+  }
+}
+
+textarea::-webkit-scrollbar {
+  width: 3px;
+}
+
+textarea::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #00bee8;
+  border-radius: 10px;
+}
+
+.resize-textarea {
   position: absolute;
-  right: 118px;
-  bottom: 0;
+  bottom: 5px;
+  right: 7px;
+}
+
+.textarea-div {
+  width: 100%;
+  height: 217px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #141d2f;
+  margin-bottom: 35px;
+}
+
+.red-alert-img {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 12px;
+}
+
+.successfull-img {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+}
+
+button {
+  width: 253px;
+  height: 58px;
+  background-color: #00bee8;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 400;
+  font-size: 23px;
+  &:hover {
+    background-color: #4b47ff;
+    cursor: pointer;
+  }
+}
+
+input::placeholder {
+  color: white;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+textarea::placeholder {
+  color: white;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.red-border {
+  border: 1px solid red;
+  &:hover {
+    border: 1px solid red;
+  }
+}
+
+.green-border {
+  border: 1px solid #70e61c;
+  &:hover {
+    border: 1px solid #70e61c;
+  }
+}
+
+.blue-border {
+  border: 1px solid #4b47ff;
+  &:hover {
+    border: 1px solid #00bee8;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.scroll-up-img {
+  position: absolute;
+  right: 119px;
+  bottom: 82px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .alert-letters {
@@ -217,4 +254,59 @@ form {
   left: 10px;
   font-weight: 400;
   font-size: 13px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 19px;
+  right: 41px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.form {
+  position: absolute;
+  bottom: -92px;
+  transform: rotate(79deg);
+  left: -188px;
+}
+
+.send-message {
+  position: absolute;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  bottom: -40px;
+}
+
+.send-message-img {
+  position: absolute;
+  bottom: -39px;
+  right: 18px;
+  object-fit: contain;
+  width: 35px;
+  height: 35px;
 }
