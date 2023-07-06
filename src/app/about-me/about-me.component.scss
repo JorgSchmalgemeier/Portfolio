@@ -8,14 +8,23 @@
   position: relative;
 }
 
+.scroll-to-about-me {
+  position: absolute;
+  top: -110px;
+}
+
 .about-me-container {
+  width: 100%;
   z-index: 2;
   min-height: 500px;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
 }
 
 .text-container {
-  margin-right: 100px;
+  max-width: 530px;
 }
 
 .headline {
@@ -31,12 +40,12 @@
 .img-container {
   width: 50%;
   height: fit-content;
-  margin-top: 20px;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
     img {
-      width: 400px;
-      height: 400px;
+      width: 453px;
+      height: 453px;
       object-fit: contain;
       border: 4px solid #00BEE8;
       border-radius: 100%;
@@ -45,14 +54,13 @@
 
 .blue-line-img {
   border: 2px solid #00BEE8;
-  width: 178px;
+  width: 34%;
   height: 0;
 }
 
 .text-box {
   display: flex;
   margin-top: 35px;
-  max-width: 400px;
 }
 
 .bulb-icon {
@@ -67,6 +75,119 @@
 
 .background-form {
   position: absolute;
-  right: -465px;
+  right: 0;
   top: -170px;
+}
+
+
+//responsiv for small devices
+
+@media (max-width: 1400px) {
+  .img-container img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .img-container {
+    width: 48%;
+  }
+
+  .blue-line-img {
+    width: 22%;
+  }
+
+  .about-me-container {
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 1250px) {
+  .text-container {
+    max-width: 420px;
+  }
+
+  .headline {
+    margin-bottom: 5px;
+  }
+}
+
+
+@media (max-width: 1120px) {
+  .img-container img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+
+@media (max-width: 1040px) {
+  .text-container {
+    max-width: 440px;
+  }
+
+  .img-container img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-me-container {
+    align-items: center;
+  }
+}
+
+@media (max-width: 1010px) {
+  :host {
+    padding-left: 90px;
+  }
+}
+
+@media (max-width: 900px) {
+  :host {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  .img-container {
+    display: none;
+  }
+
+  .text-container {
+    max-width: unset;
+  }
+}
+
+
+@media (max-width: 750px) {
+  :host {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+
+@media (max-width: 630px) {
+  :host {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+
+@media(max-width: 600px) {
+  .description {
+    font-size: 15px;
+  }
+
+  .text-box {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  :host {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

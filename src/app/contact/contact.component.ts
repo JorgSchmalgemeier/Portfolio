@@ -1,13 +1,14 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
@@ -17,6 +18,10 @@ export class ContactComponent {
   messageValid = true;
   isLoading = false;
   sendMessage = false;
+
+  ngOnInit(): void {
+    AOS.init();
+  }
 
   contactForm = new FormGroup({
     nameForm: new FormControl('', [Validators.required,Validators.minLength(3),]),
@@ -137,5 +142,13 @@ export class ContactComponent {
     } else {
       this.messageValid = true;
     }
+  }
+
+  scrollUp() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
   }
 }

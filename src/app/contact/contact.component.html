@@ -1,10 +1,12 @@
+<div class="main-contact-container">
+<div class="scroll-to-contact" id="scroll-to-contact"></div>
 <div class="headline-box">
   <div class="blue-line"></div>
   <h1 class="headline">Contact</h1>
 </div>
 
 <div class="contact-container">
-  <div class="info-box">
+  <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine" class="info-box">
     <span class="span-headline">Got a problem to solve?</span>
     <span class="span-contact">Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</span>
     <span class="span-need">Need a Frontend developer?&nbsp;<p class="p-bold">Contact me!</p></span>
@@ -52,8 +54,7 @@
     <img class="send-message-img" src="/assets/img/objects/icon-successfull.png" [ngClass]="sendMessage == true ? 'd-block' : 'd-none'">
   </form>
 
-  <img class="scroll-up-img" src="assets/img/objects/scroll-up.png">
-
-
+  <img class="scroll-up-img" (click)="scrollUp()" src="assets/img/objects/scroll-up.png">
+</div>
 
 <img class="form" src="assets/img/objects/form-portfolio3.png">

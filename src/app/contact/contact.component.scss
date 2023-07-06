@@ -5,6 +5,15 @@
   position: relative;
 }
 
+.main-contact-container {
+  position: relative;
+}
+
+.scroll-to-contact {
+  position: absolute;
+  top: -110px;
+}
+
 .headline-box {
   display: flex;
   align-items: center;
@@ -47,6 +56,7 @@
   font-weight: 700;
   font-size: 32px;
   margin-bottom: 35px;
+  margin-top: -8px;
 }
 
 .span-contact {
@@ -180,9 +190,15 @@ button {
   color: white;
   font-weight: 400;
   font-size: 23px;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
   &:hover {
     background-color: #4b47ff;
     cursor: pointer;
+    -webkit-transform: scale(1.12);
+	  transform: scale(1.12);
   }
 }
 
@@ -243,6 +259,7 @@ textarea::placeholder {
   bottom: 82px;
   &:hover {
     cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(47%) sepia(81%) saturate(1427%) hue-rotate(155deg) brightness(104%) contrast(101%);
   }
 }
 

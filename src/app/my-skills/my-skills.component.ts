@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-my-skills',
   templateUrl: './my-skills.component.html',
   styleUrls: ['./my-skills.component.scss']
 })
-export class MySkillsComponent {
+export class MySkillsComponent implements OnInit {
   //skills = ['Angular'];
   skills = [
     {img: 'angular-icon.png', name: 'Angular'},
@@ -19,4 +20,8 @@ export class MySkillsComponent {
     {img: 'scrum-icon.png', name: 'Scrum'},
     {img: 'material-icon.png', name: 'Material design'}
   ];
+
+  ngOnInit(): void {
+    AOS.init();
+  }
 }

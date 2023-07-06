@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-project',
@@ -19,6 +20,15 @@ export class ProjectComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    AOS.init();
+
+    document.querySelectorAll('img')
+      .forEach((img) =>
+        img.addEventListener('load', () =>
+          AOS.refresh()
+          )
+      );
+
     if (this.project.name == 'El Pollo Loco') {
       this.changeDirection = true;
     }  else {

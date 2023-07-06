@@ -13,6 +13,11 @@
   width: 100%;
 }
 
+.scroll-to-portfolio {
+  position: absolute;
+  top: -110px;
+}
+
 .headline-container {
   display: flex;
   align-items: center;
@@ -46,25 +51,23 @@
 
 .long-blue-line {
   border: 2px solid #4b47ff;
-  width: 34%;
+  width: 32%;
   height: 0;
   position: absolute;
-  top: 54px;
+  top: 68px;
   right: 0;
 }
 
 .form {
   position: absolute;
-  transform: rotate(180deg);
   top: 484px;
-  right: -100px;
+  right: 0;
   width: 750px;
 }
 
 .form-2 {
   position: absolute;
-  transform: rotate(67deg);
   bottom: -277px;
-  right: -522px;
+  right: 0;
   z-index: 1;
 }

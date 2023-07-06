@@ -3,8 +3,22 @@
     <span class="logo-name">J<a class="logo-color-letters">oe</a>rg</span>
   </div>
   <div>
-    <span class="header-link">About me</span>
-    <span class="header-link">Skills</span>
-    <span class="header-link">Portfolio</span>
+    <a href="#scroll-to-about-me"><span class="header-link">About me</span></a>
+    <a href="#scroll-to-my-skills"><span class="header-link">Skills</span></a>
+    <a href="#scroll-to-portfolio"><span class="header-link">Portfolio</span></a>
+  </div>
+
+  <input (click)="showMobileMenu()" type="checkbox" id="menu_checkbox">
+  <label class="mobile-nav-bar" for="menu_checkbox">
+    <div [class.div1-change]="mobileMenu"></div>
+    <div [class.div2-change]="mobileMenu"></div>
+    <div [class.div3-change]="mobileMenu"></div>
+  </label>
+
+  <div *ngIf="mobileMenu" class="mobile-menu">
+    <a href="#scroll-to-about-me" (click)="closeMobileMenu()"><span class="header-link-mobile">About me</span></a>
+    <a href="#scroll-to-my-skills" (click)="closeMobileMenu()"><span class="header-link-mobile">Skills</span></a>
+    <a href="#scroll-to-portfolio" (click)="closeMobileMenu()"><span class="header-link-mobile">Portfolio</span></a>
+    <a href="#scroll-to-contact" (click)="closeMobileMenu()"><span class="header-link-mobile">Contact</span></a>
   </div>
 </header>
