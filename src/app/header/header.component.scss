@@ -12,6 +12,12 @@
   z-index: 10;
 }
 
+.logo-div {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .logo-name {
   font-size: 35px;
   font-family: "Poppins";
@@ -34,6 +40,7 @@
   &:hover {
     //border-bottom: 3px solid #4b47ff;
     //transition: all 225ms ease-in-out;
+    color: #00bee8;
   }
 }
 
@@ -42,7 +49,6 @@ a {
   text-decoration: none;
   &:hover {
     cursor: pointer;
-    color: #00bee8;
   }
 }
 
@@ -211,5 +217,9 @@ label div:nth-child(2) {
 
   label {
     right: 15px;
+  }
+
+  .mobile-menu {
+    margin-left: -15px;
   }
 }

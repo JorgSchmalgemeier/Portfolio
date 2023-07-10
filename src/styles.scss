@@ -9,6 +9,11 @@ body {
   overflow-x: hidden;
 }
 
+.loading-body {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .site-padding {
   padding-left: 120px;
   padding-right: 120px;
@@ -39,6 +44,10 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #00bee8;
   border-radius: 2px;
+}
+
+.d-none {
+  display: none !important;
 }
 
 

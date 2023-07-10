@@ -1,29 +1,32 @@
 :host {
-  margin-bottom: 120px;
+  padding-bottom: 120px;
   display: block;
+  background-color: #141d2f;
 }
 
 .introduction-container {
   background-color: #141d2f;
   font-family: "Poppins";
   display: flex;
-  padding-right: 120px;
   max-height: 650px;
+  justify-content: space-between;
+  margin-right: 420px;
 }
 
 .intro-background-form {
-  margin-left: -80px;
-  margin-top: 110px;
-  width: 800px;
+  margin-left: -60px;
+  margin-top: 206px;
+  width: 909px;
+  height: 600px;
 }
 
 .introduction-img {
-  height: 705px;
-  width: 646px;
+  height: 794px;
+  width: 822px;
   object-fit: cover;
   position: absolute;
   left: 28px;
-  top: 18px;
+  top: 40px;
 }
 
 .intro-box {
@@ -31,18 +34,18 @@
   align-items: center;
   height: fit-content;
   z-index: 2;
-  margin-top: 235px;
+  margin-top: 302px;
 }
 
 .text-I-am {
   font-weight: 400;
-  font-size: 53px;
+  font-size: 73px;
   transform: rotate(-90deg);
   color: white;
   width: fit-content;
   min-width: fit-content;
   height: fit-content;
-  margin-top: 7px;
+  margin-top: 16px;
   margin-right: -10px;
   margin-left: -170px;
 }
@@ -56,20 +59,20 @@
 .intro-name {
   color: white;
   font-weight: 700;
-  font-size: 61px;
+  font-size: 90px;
 }
 
 .intro-dev {
   font-weight: 400;
-  font-size: 48px;
+  font-size: 58px;
   margin-top: -10px;
   color: #4b47ff;
 }
 
 .btn-talk-a {
   position: absolute;
-  top: 180px;
-  left: 136px;
+  top: 228px;
+  left: 183px;
 }
 
 .btn-talk {
@@ -95,9 +98,9 @@
 
 .background-form {
   position: absolute;
-  top: 260px;
+  top: 422px;
   left: -5px;
-  width: calc(100% + 5px);
+  width: 100%;
   height: 970px;
 }
 
@@ -130,7 +133,7 @@
   font-family: "Poppins";
   position: relative;
   padding-right: 120px;
-  margin-top: 90px;
+  margin-top: 314px;
 }
 
 .scroll-down-div {
@@ -152,31 +155,136 @@
 }
 
 
-//responsiv for small devices
+//responsiv for small (and big) devices
 
-@media(max-width:1400px) {
+@media(max-width: 2350px) {
+  .introduction-container {
+    margin-right: 220px;
+  }
+}
+
+
+@media(max-width: 2100px) {
+  .introduction-container {
+    margin-right: 120px;
+  }
+}
+
+@media(max-width: 1980px) {
+  .introduction-container {
+    justify-content: unset;
+  }
+
   .intro-name {
-    font-size: 41px;
+    font-size: 75px;
   }
 
   .intro-dev {
-    font-size: 35px;
+    font-size: 55px;
+  }
+
+  .text-I-am {
+    font-size: 62px;
+    margin-top: 10px;
+  }
+
+  .introduction-img {
+    height: 705px;
+    width: 646px;
+    top: 18px;
+  }
+
+  .intro-background-form {
+    margin-left: -80px;
+    margin-top: 110px;
+    width: 800px;
+  }
+
+  .section-between {
+    margin-top: 95px;
+  }
+
+  .background-form {
+    top: 260px;
+  }
+
+  .intro-name {
+    font-size: 61px;
+  }
+
+  .intro-dev {
+    font-size: 58px;
+  }
+
+  .text-I-am {
+    font-size: 53px;
+    margin-top: 7px;
+  }
+
+  .btn-talk-a {
+    position: absolute;
+    top: 180px;
+    left: 136px;
+  }
+
+  .intro-box {
+    margin-top: 235px;
+    margin-left: 150px;
+  }
+}
+
+
+@media(max-width: 1700px) {
+  .intro-box {
+    margin-left: 100px;
+  }
+}
+
+
+@media(max-width: 1630px) {
+  .intro-box {
+    margin-left: 0;
+  }
+}
+
+@media(max-width:1475px) {
+  .intro-box {
+    margin-top: 280px;
+  }
+
+  .intro-name {
+    font-size: 51px;
+  }
+
+  .intro-dev {
+    font-size: 38px;
     margin-top: -5px;
   }
 
   .text-I-am {
-    font-size: 37px;
-    margin-top: 5px;
+    font-size: 43px;
+    margin-top: 6px;
     margin-left: -143px;
   }
 
   .btn-talk-a {
-    top: 133px;
+    top: 143px;
     left: 88px;
   }
+}
 
-  .background-form {
-    width: 1410px;
+
+@media(max-width:1365px) {
+  .intro-name {
+    font-size: 45px;
+  }
+
+  .intro-dev {
+    font-size: 35px;
+  }
+
+  .text-I-am {
+    font-size: 40px;
   }
 }
 
@@ -189,6 +297,30 @@
 
   .intro-background-form {
     margin-left: -109px;
+  }
+
+  .intro-box {
+    margin-top: 261px;
+  }
+}
+
+
+@media(max-width:1270px) {
+  .intro-name {
+    font-size: 41px;
+  }
+
+  .intro-dev {
+    font-size: 34px;
+  }
+
+  .text-I-am {
+    font-size: 37px;
+    margin-top: 4px;
+  }
+
+  .btn-talk-a {
+    top: 132px;
   }
 }
 
@@ -205,75 +337,109 @@
 }
 
 @media(max-width:1170px) {
-  .intro-name {
-    font-size: 44px;
-    line-height: 129%;
+  .introduction-container {
+    justify-content: end;
   }
 
   .text-I-am {
-    font-size: 41px;
-    margin-top: -44px;
     margin-left: -99px;
+    font-size: 36px;
+    margin-top: 4px;
+  }
+
+  .intro-dev {
+    font-size: 32px;
   }
 
   .btn-talk-a {
-    top: 182px;
+    top: 125px;
     left: 81px;
   }
 
   .introduction-img {
     width: 487px;
     left: 22px;
+    top: 30px;
   }
 
   .background-form {
-    top: 223px;
+    top: 255px;
   }
 
   .section-between {
-    margin-top: 75px;
+    margin-top: 330px;
   }
 
   .intro-background-form {
-    margin-left: -128px;
-    width: 720px;
+    margin-left: -155px;
+    margin-top: 182px;
+    height: 460px;
+    position: absolute;
+    left: 0;
   }
 }
 
 
-@media(max-width:1070px) {
-  .text-I-am {
-    margin-left: -150px;
+@media(max-width:1090px) {
+  .background-form {
+    top: 205px;
   }
-}
 
-@media(max-width:1010px) {
   .introduction-img {
-    left: -7px;
+    width: 456px;
+    top: -3px;
+    left: 38px;
   }
 
   .intro-name {
-    font-size: 40px;
-  }
-
-  .text-I-am {
-    font-size: 37px;
-    margin-top: -45px;
-    margin-left: -110px;
+    font-size: 38px;
   }
 
   .intro-dev {
-    font-size: 33px;
+    font-size: 31px;
+  }
+
+  .text-I-am {
+    font-size: 34px;
   }
 
   .btn-talk-a {
-    top: 172px;
-    left: 69px;
+    top: 116px;
+  }
+
+  .intro-box {
+    margin-top: 228px;
+  }
+}
+
+
+@media(max-width:1030px) {
+  .intro-name {
+    font-size: 36px;
+  }
+
+  .intro-dev {
+    font-size: 29px;
+  }
+
+  .text-I-am {
+    font-size: 32px;
+    margin-top: 2px;
+  }
+}
+
+
+@media(max-width:1010px) {
+  .introduction-container {
+    margin-right: 90px;
+  }
+
+  .introduction-img {
+    left: 18px;
   }
 
   .intro-background-form {
-    margin-left: -141px;
-    width: 680px;
+    margin-left: -171px;
   }
 
   .scroll-down-div {
@@ -282,43 +448,60 @@
 }
 
 @media(max-width:930px) {
+  :host {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    display: unset;
+  }
+
   .introduction-container {
     flex-direction: column;
     align-items: center;
-    padding-left: 70px;
+    padding-left: 90px;
     padding-right: 90px;
+    margin-right: 0;
   }
 
   .introduction-img {
     position: unset;
-    margin-top: -710px;
+    margin-top: -582px;
   }
 
   .intro-background-form {
     margin-left: -30px;
-    margin-top: 53px;
+    margin-top: 105px;
+    position: unset;
   }
 
   .background-form {
-    top: 153px;
-    margin-left: -300px;
-    transform: rotate(4deg);
-    height: 1019px;
+    top: 150px;
+    height: 850px;
+    width: 155%;
+    transform: rotate(-4deg);
+    margin-left: -50px;
   }
 
   .intro-box {
-    margin-top: -107px;
+    margin-top: -116px;
+  }
+
+  .intro-name {
+    font-size: 40px;
+  }
+
+  .intro-dev {
+    font-size: 33px;
   }
 
   .text-I-am {
-    margin-top: -8px;
     margin-left: 0;
     margin-top: 0;
     font-size: 34px;
   }
 
   .btn-talk-a {
-    top: 106px;
+    top: 113px;
     left: 111px;
   }
 
@@ -354,7 +537,8 @@
 
 @media(max-width:840px) {
   .background-form {
-    top: 141px;
+    top: 164px;
+    transform: rotate(-2deg);
   }
 }
 
@@ -364,12 +548,9 @@
     padding-left: 35px;
     padding-right: 60px;
   }
-}
 
-
-@media(max-width:720px) {
   .background-form {
-    top: 128px;
+    top: 160px;
   }
 }
 
@@ -387,7 +568,7 @@
   .introduction-img {
     width: 451px;
     height: 600px;
-    margin-top: -701px;
+    margin-top: -580px;
   }
 
   .intro-box {
@@ -418,7 +599,9 @@
   }
 
   .background-form {
-    top: 103px;
+    top: 109px;
+    transform: rotate(-3deg);
+    width: 183%;
   }
 
   .contact-mail {
@@ -427,6 +610,14 @@
 
   .contact-icons {
     width: 329px;
+  }
+}
+
+
+@media(max-width: 550px) {
+  .background-form {
+    top: 114px;
+    transform: rotate(-1deg);
   }
 }
 
@@ -460,6 +651,12 @@
     height: 53px;
     font-size: 20px;
   }
+
+  .background-form {
+    top: 107px;
+    transform: rotate(-2deg);
+    width: 206%;
+  }
 }
 
 @media(max-width:400px) {
@@ -478,12 +675,12 @@
 
   .intro-box {
     margin-left: 71px;
-    margin-top: -88px;
+    margin-top: -99px;
   }
 
   .btn-talk-a {
     left: 41px;
-    top: 124px;
+    top: 129px;
   }
 
   .blue-line {
