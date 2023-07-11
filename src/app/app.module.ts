@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { WebsiteLoadingDefaultComponent } from './website-loading-default/website-loading-default.component';
+import { MainWebsiteComponent } from './main-website/main-website.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
     ProjectComponent,
     ContactComponent,
     FooterComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    WebsiteLoadingDefaultComponent,
+    MainWebsiteComponent
   ],
   imports: [
     BrowserModule,

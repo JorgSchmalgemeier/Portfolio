@@ -15,8 +15,8 @@
   <form [formGroup]="contactForm" (ngSubmit)="sendMail()" #myForm>
     <div class="input-div" [class.red-border]="!nameValid" [class.green-border]="nameForm?.valid">
       <input required minlength="3" (keyup)="checkNameField()" placeholder="Your name" formControlName="nameForm" (keyup)="checkNameField()" type="text" name="name" #nameField>
-      <img class="red-alert-img" src="/assets/img/objects/input-red.png" [class.d-flex]="!nameValid">
-      <img class="successfull-img" src="/assets/img/objects/icon-successfull.png" *ngIf="nameForm?.valid">
+      <img class="red-alert-img" src="assets/img/objects/input-red.png" [class.d-flex]="!nameValid">
+      <img class="successfull-img" src="assets/img/objects/icon-successfull.png" *ngIf="nameForm?.valid">
     </div>
     <div *ngIf="nameForm?.invalid && (nameForm?.dirty || nameForm?.touched)">
       <div class="alert-letters" *ngIf="nameForm?.errors?.['required']">Your name is required</div>
@@ -26,8 +26,8 @@
 
     <div class="input-div" [class.red-border]= "!emailValid" [class.green-border]="emailForm?.valid">
       <input placeholder="Your email" formControlName="emailForm" (keyup)="checkEmailField()" required type="email" name="email" #emailField>
-      <img class="red-alert-img" src="/assets/img/objects/input-red.png" [class.d-flex]= "!emailValid">
-      <img class="successfull-img" src="/assets/img/objects/icon-successfull.png" *ngIf="emailForm?.valid">
+      <img class="red-alert-img" src="assets/img/objects/input-red.png" [class.d-flex]= "!emailValid">
+      <img class="successfull-img" src="assets/img/objects/icon-successfull.png" *ngIf="emailForm?.valid">
     </div>
     <div *ngIf="emailForm?.invalid && (emailForm?.dirty || emailForm?.touched)">
       <div class="alert-letters" [ngStyle]="{'top.px': 144}" *ngIf="emailForm?.errors?.['required']">Your email is required</div>
@@ -37,9 +37,9 @@
 
     <div class="textarea-div">
       <textarea required minlength="3" placeholder="Your message" formControlName="messageForm" [class.red-border]= "!messageValid" [class.green-border]="messageForm?.valid"  (keyup)="checkMessageField()" minlength="5" name="message" #messageField></textarea>
-      <img class="red-alert-img" src="/assets/img/objects/input-red.png" [class.d-flex]= "!messageValid">
-      <img class="successfull-img" src="/assets/img/objects/icon-successfull.png" *ngIf="messageForm?.valid">
-      <img class="resize-textarea" src="/assets/img/objects/resize-textbox.png">
+      <img class="red-alert-img" src="assets/img/objects/input-red.png" [class.d-flex]= "!messageValid">
+      <img class="successfull-img" src="assets/img/objects/icon-successfull.png" *ngIf="messageForm?.valid">
+      <img class="resize-textarea" src="assets/img/objects/resize-textbox.png">
 
     </div>
     <div *ngIf="messageForm?.invalid && (messageForm?.dirty || messageForm?.touched)">
@@ -51,7 +51,7 @@
     <button type="submit" [disabled]="!contactForm.valid" #sendButton>Send message :)</button>
     <div class="lds-dual-ring" *ngIf="isLoading"></div>
     <span class="send-message" [ngClass]="sendMessage == true ? 'd-block' : 'd-none'">Your message has been successfully sent.</span>
-    <img class="send-message-img" src="/assets/img/objects/icon-successfull.png" [ngClass]="sendMessage == true ? 'd-block' : 'd-none'">
+    <img class="send-message-img" src="assets/img/objects/icon-successfull.png" [ngClass]="sendMessage == true ? 'd-block' : 'd-none'">
   </form>
 
   <img class="scroll-up-img" (click)="scrollUp()" src="assets/img/objects/scroll-up.png">

@@ -1,0 +1,29 @@
+.main-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #141d2f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins';
+}
+
+.text-error {
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+  margin-top: 300px;
+  margin-bottom: 50px;
+}
+
+.text-solution {
+  font-weight: 400;
+  font-size: 23px;
+  color: white;
+}

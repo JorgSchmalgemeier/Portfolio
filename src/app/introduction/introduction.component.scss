@@ -39,13 +39,13 @@
 
 .text-I-am {
   font-weight: 400;
-  font-size: 73px;
+  font-size: 71px;
   transform: rotate(-90deg);
   color: white;
   width: fit-content;
   min-width: fit-content;
   height: fit-content;
-  margin-top: 16px;
+  margin-top: 14px;
   margin-right: -10px;
   margin-left: -170px;
 }
@@ -184,8 +184,8 @@
   }
 
   .text-I-am {
-    font-size: 62px;
-    margin-top: 10px;
+    font-size: 57px;
+    margin-top: 6px;
   }
 
   .introduction-img {
@@ -216,11 +216,6 @@
     font-size: 58px;
   }
 
-  .text-I-am {
-    font-size: 53px;
-    margin-top: 7px;
-  }
-
   .btn-talk-a {
     position: absolute;
     top: 180px;
@@ -247,7 +242,7 @@
   }
 }
 
-@media(max-width:1475px) {
+@media(max-width:1485px) {
   .intro-box {
     margin-top: 280px;
   }
@@ -496,8 +491,8 @@
 
   .text-I-am {
     margin-left: 0;
-    margin-top: 0;
-    font-size: 34px;
+    margin-top: 4px;
+    font-size: 35px;
   }
 
   .btn-talk-a {
@@ -532,6 +527,10 @@
   .contact-icons {
     width: 555px;
   }
+
+  .scroll-down-div {
+    display: none;
+  }
 }
 
 
@@ -561,10 +560,6 @@
     padding-right: 30px;
   }
 
-  .scroll-down-div {
-    display: none;
-  }
-
   .introduction-img {
     width: 451px;
     height: 600px;
@@ -579,8 +574,8 @@
   }
 
   .text-I-am {
-    margin-top: -42px;
-    font-size: 35px;
+    margin-top: -40px;
+    font-size: 36px;
     margin-right: -14px;
   }
 

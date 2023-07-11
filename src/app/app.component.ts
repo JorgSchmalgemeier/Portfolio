@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +11,13 @@ export class AppComponent implements OnInit {
   title = 'portfolio';
   //public loading: boolean = true;
 
+  constructor(private router: Router) {}
+
 
   ngOnInit(): void {
     this.showLoadingAnimation();
 
-    fetch('http://localhost:4200')
+    fetch('https://joerg-schmalgemeier.developerakademie.net/portfolio/')
     .then((response) => {
       if (response.ok) {
         return response.text();
@@ -29,9 +32,7 @@ export class AppComponent implements OnInit {
       }, 2000);
     })
     .catch((error) => {
-      // Fehler beim Laden
-
-      // Behandle den Fehler
+      this.router.navigateByUrl('/loading-default');
     });
   }
 
