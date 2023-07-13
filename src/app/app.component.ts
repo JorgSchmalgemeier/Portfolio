@@ -9,15 +9,22 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   @Input() projects:any;
   title = 'portfolio';
-  //public loading: boolean = true;
 
   constructor(private router: Router) {}
 
 
   ngOnInit(): void {
     this.showLoadingAnimation();
+    this.loadWebsite();
+  }
 
-    fetch('https://joerg-schmalgemeier.developerakademie.net/portfolio/')
+
+  /**
+   * Load the website, show the loading animation. In case of loading default show the loading default site with a message for the user
+   *
+   */
+  loadWebsite() {
+    fetch('http://joerg-schmalgemeier.com/')
     .then((response) => {
       if (response.ok) {
         return response.text();
@@ -26,25 +33,32 @@ export class AppComponent implements OnInit {
       }
     })
     .then((data) => {
-      // Erfolgreich geladen
+      // loading successfully
       setTimeout(() => {
-        this.hideLoadingAnimation(); // Ladevorgang abgeschlossen, Ladeanimation ausblenden
+        this.hideLoadingAnimation(); // finished loading, hide loading animation
       }, 2000);
     })
     .catch((error) => {
-      this.router.navigateByUrl('/loading-default');
+      this.router.navigateByUrl('/loading-default'); //show loading-default site
     });
   }
 
 
+  /**
+   * Change the CSS properties for the body for the loading animation
+   *
+   */
   showLoadingAnimation() {
     document.body.classList.add('loading-body');
   }
 
 
+  /**
+   * Remove the CSS properties from the body and hide the loading animation
+   *
+   */
   hideLoadingAnimation() {
     document.body.classList.remove('loading-body');
     document.getElementById('loader')?.classList.add('d-none');
-    //this.loading = false;
   }
 }

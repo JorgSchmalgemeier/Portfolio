@@ -16,12 +16,9 @@ export class ContactComponent implements OnInit {
   nameValid = true;
   emailValid = true;
   messageValid = true;
+  formGroupValid = false;
   isLoading = false;
   sendMessage = false;
-
-  ngOnInit(): void {
-    AOS.init();
-  }
 
   contactForm = new FormGroup({
     nameForm: new FormControl('', [Validators.required,Validators.minLength(3),]),
@@ -30,21 +27,56 @@ export class ContactComponent implements OnInit {
   });
 
 
+  ngOnInit(): void {
+    AOS.init();
+    this.checkFormGroup();
+  }
+
+
+  /**
+   * Check if the form group is valid and change the value of this.formGroupValid to change the css class of the buttton
+   *
+   */
+  checkFormGroup() {
+    if (this.contactForm?.valid) {
+      this.formGroupValid = true;
+    } else {
+      this.formGroupValid = false;
+    }
+  }
+
+
+  /**
+   * Get the name input field from the form group to use form control
+   *
+   */
   get nameForm() {
     return this.contactForm.get('nameForm');
   }
 
 
+  /**
+   * Get the email input field from the form group to use form control
+   *
+   */
   get emailForm() {
     return this.contactForm.get('emailForm');
   }
 
 
+  /**
+   * Get the message text area from the form group to use form control
+   *
+   */
   get messageForm() {
     return this.contactForm.get('messageForm');
   }
 
 
+  /**
+   * Get the values of the input fields, send the email with all data from the contact form and reset the form group
+   *
+   */
   sendMail() {
     this.isLoading = true;
     let nameField = this.nameField.nativeElement;
@@ -58,8 +90,17 @@ export class ContactComponent implements OnInit {
     this.contactForm.reset();
     this.isLoading = false;
     this.showTextSuccess();
+    this.checkFormGroup();
   }
 
+
+  /**
+   * Send an email with all data from the input fields
+   *
+   * @param nameField - This is the name input field
+   * @param emailField - This is the email input field
+   * @param messageField - This is the message input field
+   */
   async fetchData(nameField: any, emailField: any, messageField: any) {
     let fd = new FormData();
     fd.append('name', nameField.value);
@@ -75,6 +116,11 @@ export class ContactComponent implements OnInit {
     );
   }
 
+
+  /**
+   * Show a text that the message was successfully sended
+   *
+   */
   showTextSuccess() {
     this.sendMessage = true;
     console.log(this.sendMessage);
@@ -84,24 +130,32 @@ export class ContactComponent implements OnInit {
     }, 2000);
   }
 
-  disableFields(
-    nameField: any,
-    emailField: any,
-    messageField: any,
-    sendButton: any
-  ) {
+
+  /**
+   * Disable all input fields and the button
+   *
+   * @param nameField - This is the name input field
+   * @param emailField - This is the email input field
+   * @param messageField - This is the message input field
+   * @param sendButton - This is the "send message" button
+   */
+  disableFields(nameField: any, emailField: any, messageField: any, sendButton: any) {
     nameField.disabled = true;
     emailField.disabled = true;
     messageField.disabled = true;
     sendButton.disabled = true;
   }
 
-  enableFields(
-    nameField: any,
-    emailField: any,
-    messageField: any,
-    sendButton: any
-  ) {
+
+  /**
+   * Disable all input fields and the button
+   *
+   * @param nameField - This is the name input field
+   * @param emailField - This is the email input field
+   * @param messageField - This is the message input field
+   * @param sendButton - This is the "send message" button
+   */
+  enableFields(nameField: any, emailField: any, messageField: any, sendButton: any) {
     nameField.disabled = false;
     emailField.disabled = false;
     messageField.disabled = false;
@@ -111,6 +165,11 @@ export class ContactComponent implements OnInit {
     messageField.value = '';
   }
 
+
+  /**
+   * Check if the name input field is dirty or touched and change the value of this.nameValid
+   *
+   */
   checkNameField() {
     if (
       this.nameForm?.invalid &&
@@ -120,8 +179,14 @@ export class ContactComponent implements OnInit {
     } else {
       this.nameValid = true;
     }
+    this.checkFormGroup();
   }
 
+
+  /**
+   * Check if the email input field is dirty or touched and change the value of this.emailValid
+   *
+   */
   checkEmailField() {
     if (
       this.emailForm?.invalid &&
@@ -131,8 +196,14 @@ export class ContactComponent implements OnInit {
     } else {
       this.emailValid = true;
     }
+    this.checkFormGroup();
   }
 
+
+  /**
+   * Check if the message input field is dirty or touched and change the value of this.messageValid
+   *
+   */
   checkMessageField() {
     if (
       this.messageForm?.invalid &&
@@ -142,8 +213,14 @@ export class ContactComponent implements OnInit {
     } else {
       this.messageValid = true;
     }
+    this.checkFormGroup();
   }
 
+
+  /**
+   * Scroll to the top of the website
+   *
+   */
   scrollUp() {
     window.scrollTo({
       top: 0,

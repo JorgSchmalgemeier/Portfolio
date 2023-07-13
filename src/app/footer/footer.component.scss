@@ -13,6 +13,11 @@ footer {
   border-top: 4px solid #00bee8;
   color: white;
   font-family: "Poppins";
+  a {
+    color: white;
+    text-decoration: none;
+    cursor: unset;
+  }
 }
 
 .name-imprint-box {
@@ -27,7 +32,7 @@ footer {
 }
 
 .logo-color-letters {
-  color: #00bee8;
+  color: #00bee8 !important;
 }
 
 .imprint {
@@ -40,6 +45,10 @@ footer {
       cursor: pointer;
       color: #00bee8;
     }
+}
+
+.imprint-policy {
+  display: flex;
 }
 
 .copyright-box {
@@ -69,6 +78,7 @@ footer {
   margin-right: 32px;
 }
 
+
 //responsiv for small devices
 
 @media(max-width: 1100px) {
@@ -76,6 +86,7 @@ footer {
     font-size: 18px;
   }
 }
+
 
 @media (max-width: 1010px) {
   footer {
@@ -134,8 +145,8 @@ footer {
   }
 
   .copyright-box {
-    margin-top: 23px;
-    margin-bottom: 33px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     font-size: 20px;
     align-items: center;
     span {
@@ -147,15 +158,8 @@ footer {
   }
 
   .logo-name {
-    margin-top: -60px;
-  }
-
-  .imprint {
-    position: absolute;
-    top: 239px;
-    margin-left: 0;
-    font-size: 20px;
-    width: 71px;
+    margin-bottom: 11px;
+    margin-top: 0;
   }
 }
 

@@ -110,7 +110,7 @@
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  width: 600px;
+  width: 700px;
   font-family: "Poppins";
 }
 
@@ -134,6 +134,9 @@
   position: relative;
   padding-right: 120px;
   margin-top: 314px;
+  a {
+    height: 30px;
+  }
 }
 
 .scroll-down-div {
@@ -147,7 +150,6 @@
   position: absolute;
   right: 70px;
   bottom: 120px;
-
   img {
     transform: rotate(-90deg);
     margin-left: 6px;
@@ -155,7 +157,7 @@
 }
 
 
-//responsiv for small (and big) devices
+//responsiv for small and big devices
 
 @media(max-width: 2350px) {
   .introduction-container {
@@ -169,6 +171,7 @@
     margin-right: 120px;
   }
 }
+
 
 @media(max-width: 1980px) {
   .introduction-container {
@@ -241,6 +244,7 @@
     margin-left: 0;
   }
 }
+
 
 @media(max-width:1485px) {
   .intro-box {
@@ -330,6 +334,7 @@
     width: 770px;
   }
 }
+
 
 @media(max-width:1170px) {
   .introduction-container {
@@ -442,6 +447,7 @@
   }
 }
 
+
 @media(max-width:930px) {
   :host {
     width: 100%;
@@ -525,7 +531,7 @@
   }
 
   .contact-icons {
-    width: 555px;
+    width: 655px;
   }
 
   .scroll-down-div {
@@ -550,6 +556,17 @@
 
   .background-form {
     top: 160px;
+  }
+}
+
+
+@media(max-width: 700px) {
+  .contact-mail {
+    display: none;
+  }
+
+  .contact-icons {
+    width: 280px;
   }
 }
 
@@ -598,14 +615,6 @@
     transform: rotate(-3deg);
     width: 183%;
   }
-
-  .contact-mail {
-    display: none;
-  }
-
-  .contact-icons {
-    width: 329px;
-  }
 }
 
 
@@ -652,7 +661,12 @@
     transform: rotate(-2deg);
     width: 206%;
   }
+
+  .section-between {
+    margin-top: 130px;
+  }
 }
+
 
 @media(max-width:400px) {
   .intro-name {
@@ -682,6 +696,7 @@
     width: 45px;
   }
 }
+
 
 @media(max-width:360px) {
   .intro-box {

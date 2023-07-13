@@ -7,7 +7,6 @@ import * as AOS from 'aos';
   styleUrls: ['./my-skills.component.scss']
 })
 export class MySkillsComponent implements OnInit {
-  //skills = ['Angular'];
   skills = [
     {img: 'angular-icon.png', name: 'Angular'},
     {img: 'typescript-icon.png', name: 'TypeScript'},

@@ -1,7 +1,15 @@
 <footer>
   <div class="name-imprint-box">
     <span class="logo-name">J<a class="logo-color-letters">oe</a>rg</span>
-    <span class="imprint">Imprint</span>
+    <div class="imprint-policy">
+    <a (click)="scrollUp()" routerLink="/imprint">
+      <span class="imprint">Imprint</span>
+    </a>
+    <span>&nbsp;|</span>
+    <a (click)="scrollUp()" routerLink="/privacy-policy">
+      <span class="imprint">Privacy Policy</span>
+    </a>
+  </div>
   </div>
   <div class="copyright-box">
     <img src="assets/img/objects/copyright.png">

@@ -1,0 +1,130 @@
+.impressum {
+  background-color: #141d2f;
+  font-family: 'Poppins';
+  display: flex;
+  flex-direction: column;
+  padding: 150px 120px 70px 120px;
+  color: white;
+  padding-top: 150px;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.headline {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 47px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 35px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 32px;
+}
+
+
+//responsiv for small devices
+
+@media(max-width: 1700px) {
+  .impressum {
+    padding: 110px 120px 70px 120px;
+  }
+  .headline {
+    font-size: 60px;
+  }
+
+  h3 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 17px;
+  }
+}
+
+
+@media (max-width: 1010px) {
+  .impressum {
+    padding: 110px 90px 70px 90px;
+  }
+}
+
+
+@media (max-width: 750px) {
+  .impressum {
+    padding: 110px 60px 70px 60px;
+  }
+}
+
+
+@media (max-width: 630px) {
+  .impressum {
+    padding: 110px 30px 70px 30px;
+  }
+
+  .headline {
+    font-size: 45px;
+  }
+
+  h3 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+
+@media(max-width:360px) {
+  .impressum {
+    padding: 150px 15px 70px 15px;
+  }
+
+  .headline {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}

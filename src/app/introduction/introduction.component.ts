@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-introduction',
@@ -7,9 +6,4 @@ import { Router } from '@angular/router';
   styleUrls: ['./introduction.component.scss']
 })
 export class IntroductionComponent {
-  constructor(private router: Router) {}
-
-  test() {
-    this.router.navigateByUrl('/loading-default');
-  }
 }

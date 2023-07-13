@@ -90,7 +90,6 @@
   }
 }
 
-
 .headline-my-skills {
   margin-bottom: 0;
 }
@@ -351,7 +350,7 @@
 
   .skills {
     margin-right: -10px;
-    width: 119%;
+    width: 105%;
   }
 
   .btn-a-skills {
@@ -375,6 +374,12 @@
 }
 
 
+@media(max-width: 329px) {
+  .btn-a-skills {
+    bottom: -1848px;
+  }
+}
+
 @media(max-width: 310px) {
   .skills {
     width: 119%;
@@ -387,10 +392,6 @@
 
 
 @media(max-width: 292px) {
-  .btn-a-skills {
-    bottom: -1848px;
-  }
-
   .blue-line {
     width: 10%;
   }

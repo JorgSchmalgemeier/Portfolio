@@ -17,6 +17,8 @@ import { FooterComponent } from './footer/footer.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { WebsiteLoadingDefaultComponent } from './website-loading-default/website-loading-default.component';
 import { MainWebsiteComponent } from './main-website/main-website.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { MainWebsiteComponent } from './main-website/main-website.component';
     FooterComponent,
     LoadingSpinnerComponent,
     WebsiteLoadingDefaultComponent,
-    MainWebsiteComponent
+    MainWebsiteComponent,
+    ImprintComponent,
+    DataProtectionComponent
   ],
   imports: [
     BrowserModule,
