@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
    *
    */
   loadWebsite() {
-    fetch('http://joerg-schmalgemeier.com/')
+    fetch('https://joerg-schmalgemeier.com/')
     .then((response) => {
       if (response.ok) {
         return response.text();

@@ -108,7 +108,7 @@ export class ContactComponent implements OnInit {
     fd.append('message', messageField.value);
     //senden
     await fetch(
-      'https://joerg-schmalgemeier.developerakademie.net/send_mail/send_mail.php',
+      'https://joerg-schmalgemeier.com/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd,
@@ -123,10 +123,8 @@ export class ContactComponent implements OnInit {
    */
   showTextSuccess() {
     this.sendMessage = true;
-    console.log(this.sendMessage);
     setTimeout(() => {
       this.sendMessage = false;
-      console.log(this.sendMessage);
     }, 2000);
   }
 
