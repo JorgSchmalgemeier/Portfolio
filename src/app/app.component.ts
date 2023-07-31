@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,13 +9,53 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   @Input() projects:any;
   title = 'portfolio';
+  loaded = [0];
+  //@ViewChild('loader') loader!: ElementRef;
+  loading!: boolean;
 
   constructor(private router: Router) {}
 
 
   ngOnInit(): void {
-    this.showLoadingAnimation();
-    this.loadWebsite();
+    this.loadLoadingAmounts();
+    console.log(this.loaded[0]);
+    if (this.loaded[0] == 0) {
+      this.loading = true;
+    } else {
+      this.loading = false;
+    }
+    console.log(this.loading);
+
+
+    if (this.loaded[0] == 0 && this.loading) {
+      this.showLoadingAnimation();
+      this.loadWebsite();
+    }
+    this.countLoading();
+    //this.hideLoadingAnimation();
+  }
+
+
+  /**
+   * This function count the loading acts of the user and save the amount in the session storage (loading animation should showd just once)
+   *
+   */
+  countLoading() {
+    this.loaded[0]++;
+    let loadingsAsText = JSON.stringify(this.loaded);
+    sessionStorage.setItem('loadingActs', loadingsAsText);
+  }
+
+
+  /**
+   * This function loads the amount of the loading acts from the session storage
+   *
+   */
+  loadLoadingAmounts() {
+    let loadingsAsText = sessionStorage.getItem('loadingActs');
+    if (loadingsAsText) {
+      this.loaded = JSON.parse(loadingsAsText);
+    }
   }
 
 
@@ -24,7 +64,7 @@ export class AppComponent implements OnInit {
    *
    */
   loadWebsite() {
-    fetch('https://joerg-schmalgemeier.com/')
+    fetch('http://localhost:4200/')
     .then((response) => {
       if (response.ok) {
         return response.text();
@@ -59,6 +99,10 @@ export class AppComponent implements OnInit {
    */
   hideLoadingAnimation() {
     document.body.classList.remove('loading-body');
-    document.getElementById('loader')?.classList.add('d-none');
+    //this.loader.nativeElement.style.display = 'none';
+    //this.loader?.nativeElement.classList.add('d-none');
+    this.loading = false;
+    console.log(this.loading);
+    console.log('test');
   }
 }

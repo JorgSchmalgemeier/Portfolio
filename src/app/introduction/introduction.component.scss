@@ -21,12 +21,13 @@
 }
 
 .introduction-img {
-  height: 794px;
+  height: 914px;
   width: 822px;
   object-fit: cover;
   position: absolute;
-  left: 28px;
+  left: 10px;
   top: 40px;
+  object-fit: contain;
 }
 
 .intro-box {
@@ -194,7 +195,7 @@
   .introduction-img {
     height: 705px;
     width: 646px;
-    top: 18px;
+    top: 54px;
   }
 
   .intro-background-form {
@@ -292,6 +293,7 @@
   .introduction-img {
     height: 655px;
     width: 596px;
+    top: 89px;
   }
 
   .intro-background-form {
@@ -330,13 +332,13 @@
   }
 
   .intro-background-form {
-    margin-left: -137px;
+    margin-left: -111px;
     width: 770px;
   }
 }
 
 
-@media(max-width:1170px) {
+@media(max-width:1185px) {
   .introduction-container {
     justify-content: end;
   }
@@ -359,7 +361,7 @@
   .introduction-img {
     width: 487px;
     left: 22px;
-    top: 30px;
+    top: 82px;
   }
 
   .background-form {
@@ -387,7 +389,7 @@
 
   .introduction-img {
     width: 456px;
-    top: -3px;
+    top: 49px;
     left: 38px;
   }
 
@@ -466,7 +468,9 @@
 
   .introduction-img {
     position: unset;
-    margin-top: -582px;
+    margin-top: -575px;
+    width: 382px;
+    margin-left: 10px;
   }
 
   .intro-background-form {
@@ -484,7 +488,7 @@
   }
 
   .intro-box {
-    margin-top: -116px;
+    margin-top: -125px;
   }
 
   .intro-name {
@@ -578,16 +582,16 @@
   }
 
   .introduction-img {
-    width: 451px;
+    width: 353px;
     height: 600px;
-    margin-top: -580px;
+    margin-top: -563px;
   }
 
   .intro-box {
     width: 410px;
     margin-top: -88px;
     margin-left: -15px;
-    margin-top: -102px;
+    margin-top: -118px;
   }
 
   .text-I-am {
@@ -642,7 +646,7 @@
 
   .intro-box {
     margin-left: 36px;
-    margin-top: -95px;
+    margin-top: -112px;
   }
 
   .btn-talk-a {
@@ -684,7 +688,7 @@
 
   .intro-box {
     margin-left: 71px;
-    margin-top: -99px;
+    margin-top: -112px;
   }
 
   .btn-talk-a {
