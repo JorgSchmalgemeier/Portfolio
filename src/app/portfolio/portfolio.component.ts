@@ -25,7 +25,7 @@ export class PortfolioComponent {
     },
     {
       name: 'Portfolio',
-      img: 'portfolio-img1.png',
+      img: 'portfolio-img.png',
       tec: 'Angular | TypeScript | HTML | CSS',
       description: 'My personal homepage based on Angular and TypeScript.',
       githubLink: 'https://github.com/JorgSchmalgemeier/Portfolio',

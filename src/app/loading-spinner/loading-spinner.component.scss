@@ -29,3 +29,19 @@
     opacity: 0.5;
   }
 }
+
+
+//responsiv for small devices
+
+@media(max-width: 900px) {
+  .loader {
+    font-size: 20vh;
+  }
+}
+
+
+@media(max-width: 900px) {
+  .loader {
+    font-size: 15vh;
+  }
+}
