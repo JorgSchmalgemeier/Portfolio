@@ -11,7 +11,7 @@ export class PortfolioComponent {
     { name: 'Join',
       img: 'join-img2.png',
       tec: 'JavaScript | HTML | CSS',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categorys.',
+      description: 'Task manager inspired by the kanban system. Create and organize tasks using drag and drop functions, assign users and categorys.',
       githubLink: 'https://github.com/JorgSchmalgemeier/Join',
       projectLink: 'https://join.joerg-schmalgemeier.com/'
     },
@@ -24,12 +24,12 @@ export class PortfolioComponent {
       projectLink: 'https://el-pollo-loco.joerg-schmalgemeier.com/'
     },
     {
-      name: 'Portfolio',
-      img: 'portfolio-img.png',
-      tec: 'Angular | TypeScript | HTML | CSS',
-      description: 'My personal homepage based on Angular and TypeScript.',
-      githubLink: 'https://github.com/JorgSchmalgemeier/Portfolio',
-      projectLink: 'https://joerg-schmalgemeier.com/'
+      name: 'Simple CRM',
+      img: 'crm-img.png',
+      tec: 'Angular | TypeScript | Firebase | HTML | CSS',
+      description: 'A simple customer relationship management software. It shows company data in graphs and gives the option to save customer information and product reviews.',
+      githubLink: 'https://github.com/JorgSchmalgemeier/Simple-CRM',
+      projectLink: 'https://simple-crm.joerg-schmalgemeier.com/'
     }
   ];
 }
