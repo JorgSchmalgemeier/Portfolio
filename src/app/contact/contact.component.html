@@ -18,7 +18,7 @@
       <img class="red-alert-img" src="assets/img/objects/input-red.png" [class.d-flex]="!nameValid">
       <img class="successfull-img" src="assets/img/objects/icon-successfull.png" *ngIf="nameForm?.valid">
     </div>
-    <div *ngIf="nameForm?.invalid && (nameForm?.dirty || nameForm?.touched)">
+    <div *ngIf="nameForm?.invalid && nameForm?.touched">
       <div class="alert-letters" *ngIf="nameForm?.errors?.['required']">Your name is required</div>
       <div class="alert-letters" *ngIf="nameForm?.errors?.['minlength']">Please write at least 3 letters</div>
     </div>
@@ -28,7 +28,7 @@
       <img class="red-alert-img" src="assets/img/objects/input-red.png" [class.d-flex]= "!emailValid">
       <img class="successfull-img" src="assets/img/objects/icon-successfull.png" *ngIf="emailForm?.valid">
     </div>
-    <div *ngIf="emailForm?.invalid && (emailForm?.dirty || emailForm?.touched)">
+    <div *ngIf="emailForm?.invalid && emailForm?.touched">
       <div class="alert-letters" [ngStyle]="{'top.px': 144}" *ngIf="emailForm?.errors?.['required']">Your email is required</div>
       <div class="alert-letters" [ngStyle]="{'top.px': 144}" *ngIf="emailForm?.errors?.['email']">Please enter a valid email address</div>
     </div>
@@ -39,7 +39,7 @@
       <img class="successfull-img" src="assets/img/objects/icon-successfull.png" *ngIf="messageForm?.valid">
       <img class="resize-textarea" src="assets/img/objects/resize-textbox.png">
     </div>
-    <div *ngIf="messageForm?.invalid && (messageForm?.dirty || messageForm?.touched)">
+    <div *ngIf="messageForm?.invalid && messageForm?.touched">
       <div class="alert-letters" [ngStyle]="{'top.px': 398}" *ngIf="messageForm?.errors?.['required']">Your message is required</div>
       <div class="alert-letters" [ngStyle]="{'top.px': 398}" *ngIf="messageForm?.errors?.['minlength']">Please use at least 5 letters</div>
     </div>

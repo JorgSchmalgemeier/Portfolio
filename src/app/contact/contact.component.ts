@@ -171,7 +171,7 @@ export class ContactComponent implements OnInit {
   checkNameField() {
     if (
       this.nameForm?.invalid &&
-      (this.nameForm?.dirty || this.nameForm?.touched)
+      this.nameForm?.touched
     ) {
       this.nameValid = false;
     } else {
@@ -188,7 +188,7 @@ export class ContactComponent implements OnInit {
   checkEmailField() {
     if (
       this.emailForm?.invalid &&
-      (this.emailForm?.dirty || this.emailForm?.touched)
+      this.emailForm?.touched
     ) {
       this.emailValid = false;
     } else {
@@ -205,7 +205,7 @@ export class ContactComponent implements OnInit {
   checkMessageField() {
     if (
       this.messageForm?.invalid &&
-      (this.messageForm?.dirty || this.messageForm?.touched)
+      this.messageForm?.touched
     ) {
       this.messageValid = false;
     } else {
