@@ -56,7 +56,7 @@ export class LoadingSpinnerComponent {
    *
    */
   loadWebsite() {
-    fetch('https://joerg-schmalgemeier.com/')
+    fetch('http://localhost:4200/')
     .then((response) => {
       if (response.ok) {
         return response.text();
