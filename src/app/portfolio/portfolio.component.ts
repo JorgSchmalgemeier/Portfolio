@@ -10,11 +10,11 @@ export class PortfolioComponent {
   public projects = [
     {
       name: 'DA Bubble',
-      img: 'join-img2.png',
+      img: 'dabubble-img2.png',
       tec: 'Angular | TypeScript | Firebase | HTML | SCSS',
       description: 'Chat-Messenger application in the style of Slack for team communication. You can create channels or chat directly with your co-workers.',
-      githubLink: 'https://github.com/JorgSchmalgemeier/Join',
-      projectLink: 'https://join.joerg-schmalgemeier.com/'
+      githubLink: 'https://github.com/JorgSchmalgemeier/DABubble',
+      projectLink: 'https://dabubble.joerg-schmalgemeier.com/'
     },
     {
       name: 'Simple CRM',
