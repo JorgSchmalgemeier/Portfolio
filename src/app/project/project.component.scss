@@ -12,7 +12,6 @@
   margin-bottom: 227px;
   width: 100%;
   z-index: 2;
-  margin-right: 100px;
   img {
     max-height: 339px;
     max-width: 620px;
@@ -85,7 +84,6 @@
 .change-direction {
   flex-direction: row-reverse;
   margin-right: 0 !important;
-  margin-left: 100px;
 }
 
 .change-direction-img {
@@ -310,5 +308,14 @@
 @media (max-width: 300px) {
   .project-container img {
     width: 250px;
+  }
+}
+
+
+// responsive for bigger devices
+
+@media(min-width: 1500px) {
+  .project-container {
+    margin-bottom: 350px;
   }
 }

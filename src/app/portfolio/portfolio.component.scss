@@ -212,3 +212,11 @@
         margin-left: 20px;
   }
 }
+
+// responsive for bigger devices
+
+@media(min-width: 1500px) {
+  .info-text {
+    margin-bottom: 250px;
+  }
+}
