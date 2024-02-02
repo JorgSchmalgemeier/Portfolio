@@ -26,7 +26,7 @@ export class ProjectComponent implements OnInit {
    *
    */
   changeCSSDirection() {
-    if (this.project.name == 'El Pollo Loco') {
+    if (this.project.name == 'El Pollo Loco' || this.project.name == 'Simple CRM') {
       this.changeDirection = true;
     } else {
       this.changeDirection = false;
