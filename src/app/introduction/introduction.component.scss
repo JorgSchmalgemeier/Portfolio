@@ -786,6 +786,20 @@
   }
 }
 
+@media(min-width: 2300px) {
+  .introduction-container {
+    margin-right: 200px;
+  }
+
+  .intro-background-form {
+    margin-left: 100px;
+  }
+
+  .introduction-img {
+    left: 189px;
+  }
+}
+
 @media(min-width: 2500px) {
   :host {
     padding-bottom: 220px;
@@ -813,6 +827,20 @@
 
   .scroll-down-div {
     right: 14%;
+  }
+}
+
+@media(min-width: 2900px) {
+  .introduction-container {
+    margin-right: 18%;
+  }
+
+  .intro-background-form {
+    margin-left: 14%;
+  }
+
+  .introduction-img {
+    left: 14.5%;
   }
 }
 
