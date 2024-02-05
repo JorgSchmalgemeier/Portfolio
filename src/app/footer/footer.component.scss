@@ -191,3 +191,22 @@ footer {
     padding-right: 15px;
   }
 }
+
+
+// responsive for bigger devices
+
+@media(min-width: 2500px) {
+  footer {
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 70%;
+  }
+}
+
+@media(min-width: 3500px) {
+  footer {
+    padding-left: 25%;
+    padding-right: 25%;
+    width: 50%;
+  }
+}

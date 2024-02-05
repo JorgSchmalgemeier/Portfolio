@@ -319,3 +319,17 @@
     margin-bottom: 350px;
   }
 }
+
+@media(min-width: 2500px) {
+  :host {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+@media(min-width: 3500px) {
+  :host {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
