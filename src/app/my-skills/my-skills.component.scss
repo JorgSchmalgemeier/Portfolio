@@ -407,6 +407,16 @@
 
 // responsive for bigger devices
 
+@media(min-width: 1340px) {
+  .headline-my-skills {
+    margin-top: -33px;
+  }
+
+  .blue-line {
+    top: 36px;
+  }
+}
+
 @media(min-width: 2500px) {
   :host {
     padding-left: 15%;
