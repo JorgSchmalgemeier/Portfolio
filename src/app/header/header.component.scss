@@ -163,8 +163,8 @@ label div:nth-child(2) {
 @media (max-width: 1010px) {
   .header {
     padding-left: 90px;
-    padding-right: 60px;
-    width: calc(100% - 150px);
+    padding-right: 90px;
+    width: calc(100% - 180px);
   }
 }
 
@@ -172,8 +172,8 @@ label div:nth-child(2) {
 @media (max-width: 750px) {
   .header {
     padding-left: 60px;
-    padding-right: 30px;
-    width: calc(100% - 90px);
+    padding-right: 60px;
+    width: calc(100% - 120px);
   }
 
   .header-link {
@@ -185,8 +185,8 @@ label div:nth-child(2) {
 @media (max-width: 630px) {
   .header {
     padding-left: 30px;
-    padding-right: 0px;
-    width: calc(100% - 30px);
+    padding-right: 30px;
+    width: calc(100% - 60px);
   }
 
   .header-link {
