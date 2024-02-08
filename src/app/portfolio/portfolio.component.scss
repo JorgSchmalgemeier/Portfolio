@@ -23,13 +23,13 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  position: relative;
 }
 
 .headline {
   margin-top: 0;
   margin-bottom: 0;
   color: white;
-  margin-left: 56px;
 }
 
 .info-text {
@@ -43,10 +43,11 @@
 
 .short-blue-line {
   border: 2px solid #4b47ff;
-  width: 8.5%;
+  width: 10%;
   height: 0;
-  margin-left: -160px;
   margin-top: 5px;
+  position: absolute;
+  left: 0;
 }
 
 .long-blue-line {
@@ -95,7 +96,7 @@
   }
 
   .form {
-    top: 786px;
+    top: 1386px;
     width: 547px;
   }
 }
@@ -111,10 +112,6 @@
 @media(max-width: 700px) {
   .info-text {
     padding: 0 60px;
-  }
-
-  .headline {
-    margin-left: 45px;
   }
 }
 
@@ -146,10 +143,6 @@
     width: 19%;
   }
 
-  .short-blue-line {
-    margin-left: -111px;
-  }
-
   .info-text {
     margin-bottom: 90px;
   }
@@ -161,15 +154,6 @@
     display: none;
   }
 
-  .short-blue-line {
-    margin-left: 0;
-    width: 24%;
-  }
-
-  .headline-container {
-    justify-content: start;
-  }
-
   .form-2 {
     width: 68%;
   }
@@ -177,14 +161,6 @@
 
 
 @media(max-width: 430px) {
-  .short-blue-line {
-    width: 18%;
-  }
-
-  .headline {
-    margin-left: 35px;
-  }
-
   .info-text {
     font-size: 15px;
   }
@@ -192,13 +168,8 @@
 
 
 @media(max-width:400px) {
-  .short-blue-line {
-    width: 15%;
-  }
-
   .form {
-    top: 754px;
-    width: 415px;
+    top: 1256px;
   }
 }
 
@@ -207,13 +178,70 @@
   .info-text {
     padding: 0 15px;
   }
-
-  .headline {
-        margin-left: 20px;
-  }
 }
 
 // responsive for bigger devices
+
+@media(min-width: 350px) {
+  .short-blue-line {
+    width: 15%;
+  }
+}
+
+@media(min-width: 500px) {
+  .short-blue-line {
+    left: 5%;
+  }
+}
+
+@media(min-width: 700px) {
+  .short-blue-line {
+    width: 12%;
+    left: 14%;
+  }
+}
+
+@media(min-width: 900px) {
+  .short-blue-line {
+    left: 18%;
+  }
+}
+
+@media(min-width: 1100px) {
+  .short-blue-line {
+    left: 20%;
+  }
+}
+
+@media(min-width: 1500px) {
+  .short-blue-line {
+    left: 23%;
+  }
+}
+
+@media(min-width: 1800px) {
+  .short-blue-line {
+    left: 25%;
+  }
+}
+
+@media(min-width: 2000px) {
+  .short-blue-line {
+    left: 27%;
+  }
+}
+
+@media(min-width: 3000px) {
+  .long-blue-line {
+    width: 37%;
+  }
+}
+
+@media(min-width: 3500px) {
+  .short-blue-line {
+    left: 30%;
+  }
+}
 
 @media(min-width: 1500px) {
   .info-text {

@@ -246,3 +246,33 @@
     padding-right: 15px;
   }
 }
+
+
+// responsive for bigger devices
+
+@media(min-width: 2500px) {
+  :host {
+    padding-left: 15%;
+    padding-bottom: 300px;
+  }
+
+  .blue-line-img {
+    width: 42%;
+  }
+}
+
+@media(min-width: 3000px) {
+  .blue-line-img {
+    width: 62%;
+  }
+}
+
+@media(min-width: 3500px) {
+  :host {
+    padding-left: 25%;
+  }
+
+  .blue-line-img {
+    width: 65%;
+  }
+}
