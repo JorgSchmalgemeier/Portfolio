@@ -31,6 +31,7 @@
     <div *ngIf="emailForm?.invalid && emailForm?.touched">
       <div class="alert-letters" [ngStyle]="{'top.px': 144}" *ngIf="emailForm?.errors?.['required']">Your email is required</div>
       <div class="alert-letters" [ngStyle]="{'top.px': 144}" *ngIf="emailForm?.errors?.['email']">Please enter a valid email address</div>
+      <div class="alert-letters" [ngStyle]="{'top.px': 144}" *ngIf="emailForm?.errors?.['pattern']">Please enter a valid email address</div>
     </div>
 
     <div class="textarea-div">

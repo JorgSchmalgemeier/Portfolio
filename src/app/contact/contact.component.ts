@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
 
   contactForm = new FormGroup({
     nameForm: new FormControl('', [Validators.required,Validators.minLength(3),]),
-    emailForm: new FormControl('', [Validators.required, Validators.email]),
+    emailForm: new FormControl('', [Validators.required, Validators.email, Validators.pattern('^[a-zA-Z0-9._*/+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$')]),
     messageForm: new FormControl('', [Validators.required,Validators.minLength(5),]),
   });
 
